@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package me.eax.examples.game;
+
+message Package {
+    string picture = 1;
+    int64 version = 2;
+    int64 time = 3;
+}

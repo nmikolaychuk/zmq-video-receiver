@@ -11,7 +11,8 @@ using namespace cv;
 
 class Reader {
 public:
-    void read();
+    std::string read_and_code();
+    void decode_and_write(std::string& s);
 };
 
 
