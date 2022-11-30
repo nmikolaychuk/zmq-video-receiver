@@ -131,11 +131,11 @@ std::string ImagemConverter::base64_decode(std::string const& encoded_string)
 string ImagemConverter::mat2str(const Mat& m)
 {
     int params[3] = {0};
-    params[0] = /*CV_IMWRITE_JPEG_QUALITY*/NULL;
+    params[0] = /*CV_IMWRITE_JPEG_QUALITY*/0;
     params[1] = 100;
 
     vector<uchar> buf;
-    bool code = cv::imencode(".jpg", m, buf, std::vector<int>(params, params+2));
+    bool code = cv::imencode(".png", m, buf, std::vector<int>(params, params+2));
     uchar* result = reinterpret_cast<uchar*> (&buf[0]);
 
     return base64_encode(result, buf.size());

@@ -4,12 +4,10 @@
 
 #include "Reader.h"
 
-std::string Reader::read() {
-    Mat img = imread("../stories/picture.png");
-    std::vector<uchar> buf;
-    cv::imencode(".jpg", img, buf);
-    auto *enc_msg = reinterpret_cast<unsigned char*>(buf.data());
+void Reader::read() {
+    Mat img = imread("../stories/1.png");
     ImagemConverter con;
-    std::string encoded = con.base64_encode(enc_msg, buf.size());
-    return encoded;
+    string s=con.mat2str(img);
+    Mat img2=con.str2mat(s);
+    cv::imwrite("some.png", img2);
 }

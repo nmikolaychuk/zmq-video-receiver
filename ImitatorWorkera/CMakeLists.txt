@@ -5,6 +5,7 @@ project(IMITATOR_WORKERA C CXX)
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
+
 set(CMAKE_CXX_STANDARD 20)
 
 include_directories(

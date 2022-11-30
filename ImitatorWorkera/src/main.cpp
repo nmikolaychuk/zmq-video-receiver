@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     Reader r;
-    cout<<r.read()<<endl;
+    r.read();
     cout<<"I am IMITATOR_WORKERA";
     return 0;
 }
