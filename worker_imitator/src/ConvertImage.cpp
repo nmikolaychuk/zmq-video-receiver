@@ -135,11 +135,10 @@ string ImagemConverter::mat2str(const Mat& m)
     params[1] = 100;
 
     vector<uchar> buf;
-    bool code = cv::imencode(".png", m, buf, std::vector<int>(params, params+2));
+    cv::imencode(".png", m, buf, std::vector<int>(params, params+2));
     uchar* result = reinterpret_cast<uchar*> (&buf[0]);
 
     return base64_encode(result, buf.size());
-
 }
 
 

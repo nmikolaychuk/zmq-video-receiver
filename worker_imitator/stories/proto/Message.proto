@@ -4,6 +4,6 @@ package me.eax.examples.game;
 
 message Package {
     string picture = 1;
-    int64 version = 2;
-    int64 time = 3;
+    string version = 2;
+    int32 time = 3;
 }

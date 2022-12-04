@@ -8,7 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include <stdexcept>
-#include "../cmake-build-debug/Message.pb.h"
+#include <Message.pb.h>
 
 using namespace std;
 using namespace me::eax::examples::game;

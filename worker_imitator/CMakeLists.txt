@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.5.1)
 
-project(IMITATOR C CXX)
+project(WORKER_IMITATOR C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
-find_package( OpenCV REQUIRED )
-include_directories( ${OpenCV_INCLUDE_DIRS} )
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
 
 include(FindProtobuf)
 find_package(Protobuf REQUIRED)
@@ -24,7 +24,7 @@ include_directories(
 
 set(SOURCE_FILES src/main.cpp src/Reader.cpp include/Reader.h src/ConvertImage.cpp include/ConvertImage.h include/GenerateProto.h src/GenerateProto.cpp)
 
-add_executable(IMITATOR_WORKERA ${SOURCE_FILES})
+add_executable(WORKER_IMITATOR ${SOURCE_FILES})
 
-target_link_libraries(IMITATOR_WORKERA ${OpenCV_LIBS})
-target_link_libraries(IMITATOR_WORKERA proto ${PROTOBUF_LIBRARY})
+target_link_libraries(WORKER_IMITATOR ${OpenCV_LIBS})
+target_link_libraries(WORKER_IMITATOR proto ${PROTOBUF_LIBRARY})

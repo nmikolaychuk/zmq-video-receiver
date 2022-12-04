@@ -11,8 +11,9 @@ using namespace cv;
 
 class Reader {
 public:
-    std::string read_and_code();
-    void decode_and_write(std::string& s);
+    std::string read_and_code(std::string rdPath);
+    std::string read_and_code(const char* rdPath);
+    Mat decode_and_write(std::string& s);
 };
 
 

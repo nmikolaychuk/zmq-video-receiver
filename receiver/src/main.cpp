@@ -6,6 +6,6 @@ using namespace std;
 
 int main()
 {
-    cout<<"I am STOK";
+    cout<<"I am RECEIVER";
     return 0;
 }
